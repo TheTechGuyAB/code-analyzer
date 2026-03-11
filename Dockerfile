@@ -9,4 +9,4 @@ COPY . .
 
 RUN mkdir -p /reports
 
-ENTRYPOINT ["python", "analyze.py"]
+ENTRYPOINT ["python", "-u", "analyze.py"]
