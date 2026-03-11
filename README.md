@@ -1,5 +1,11 @@
 # Codebase Analyzer v2.0
 
+Finds architectural weaknesses, security risks, and performance issues in your codebase — automatically. Runs locally, no code leaves your environment.
+
+Need a professional review? [Contact The Tech Guy AB](https://thetechguy.se)
+
+---
+
 Multi-agent, multi-provider AI tool that examines your codebase, finds weaknesses, architectural issues, flawed assumptions, and produces a structured report.
 
 Works across most tech stacks — Next.js, PHP/Laravel, Python, .NET, Go, Rust, Java, Ruby on Rails, and more.
@@ -242,6 +248,12 @@ Implement `BaseProvider` in `providers/llm_router.py` and register it in `PROVID
 ### Custom model profile
 
 Add to `PROFILES` in `providers/llm_router.py`.
+
+## Professional Services
+
+Need help interpreting the report, prioritizing fixes, or implementing the changes? **The Tech Guy AB** offers code reviews, architecture consulting, and hands-on implementation.
+
+[marcus@thetechguy.se](mailto:marcus@thetechguy.se) · [thetechguy.se](https://thetechguy.se)
 
 ## Author
 
