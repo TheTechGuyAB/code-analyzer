@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CodebaseAnalysisReport",
+  "type": "object",
+  "required": ["meta", "stack", "findings", "summary"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "analyzed_at": { "type": "string", "format": "date-time" },
+        "root_path": { "type": "string" },
+        "duration_seconds": { "type": "number" },
+        "user_query": { "type": ["string", "null"] },
+        "source": { "type": "object" },
+        "cost": { "type": "object" }
+      }
+    },
+    "stack": { "type": "object" },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "severity", "category", "title", "description", "agent"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[A-Z]+-[0-9]+$" },
+          "severity": { "type": "string", "enum": ["critical", "warning", "info"] },
+          "category": { "type": "string", "enum": ["architecture","performance","security","resilience","maintainability","testing","dependencies","configuration","observability"] },
+          "title": { "type": "string", "maxLength": 120 },
+          "description": { "type": "string" },
+          "affected_files": { "type": "array", "items": { "type": "string" } },
+          "evidence": { "type": "string" },
+          "recommendation": { "type": "string" },
+          "effort": { "type": "string", "enum": ["trivial","small","medium","large","epic"] },
+          "agent": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["health_score", "critical_count", "warning_count", "info_count"],
+      "properties": {
+        "health_score": { "type": "number", "minimum": 0, "maximum": 100 },
+        "critical_count": { "type": "integer" },
+        "warning_count": { "type": "integer" },
+        "info_count": { "type": "integer" },
+        "top_priorities": { "type": "array", "items": { "type": "string" } },
+        "strengths": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

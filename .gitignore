@@ -1,0 +1,8 @@
+codebase-report-*.html
+__pycache__/
+*.pyc
+.env
+New folder/
+.venv/
+.claude/
+.claude/
