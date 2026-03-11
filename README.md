@@ -2,7 +2,7 @@
 
 Finds architectural weaknesses, security risks, and performance issues in your codebase — automatically. Runs locally, no code leaves your environment.
 
-Need a professional review? [Contact The Tech Guy AB](https://thetechguy.se)
+Questions? [Contact The Tech Guy AB](https://thetechguy.se)
 
 ---
 
