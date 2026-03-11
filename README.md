@@ -39,7 +39,27 @@ You can also mix freely with `--phase-model`.
 
 ## Installation
 
+### Docker (recommended)
+
+No Python installation needed:
+
 ```bash
+docker pull ghcr.io/thetechguyab/code-analyzer:latest
+
+# Analyze a local project (reports saved to ./reports)
+docker run --rm \
+  -v ./my-project:/code \
+  -v ./reports:/app/reports \
+  -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY \
+  -e GROQ_API_KEY=$GROQ_API_KEY \
+  ghcr.io/thetechguyab/code-analyzer /code
+```
+
+### From source
+
+```bash
+git clone https://github.com/TheTechGuyAB/code-analyzer.git
+cd code-analyzer
 pip install -r requirements.txt
 ```
 

@@ -1,0 +1,11 @@
+.git
+.claude
+.venv
+venv
+__pycache__
+*.pyc
+reports/
+*.html
+*.json
+!report_schema.json
+!requirements.txt
